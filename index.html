@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<p>input元素：</p>
+			<input type="text" v-model="message">
+			<p>消息是：{{ message }}</p>
+			
+			<p>textarea元素：</p>
+			<p>消息是：{{ message2 }}</p>
+			<textarea rows="" cols="" v-model="message2"></textarea>
+			
+			<p>单个复选框：</p>
+			<input type="checkbox" id="ck1" v-model="checked1">
+			<label for="ck1">{{ checked1 }}</label>
+			
+			<p>多个复选框：</p>
+			<input type="checkbox" id="ck2" value="哈哈哈" v-model="checked2">
+			<label for="ck2">哈哈哈</label>
+			<input type="checkbox" id="ck3" value="呵呵呵" v-model="checked2">
+			<label for="ck3">呵呵呵</label>
+			<input type="checkbox" id="ck4" value="嘿嘿嘿" v-model="checked2">
+			<label for="ck4">嘿嘿嘿</label>
+			<input type="checkbox" id="ck5" value="嘻嘻嘻" v-model="checked2">
+			<label for="ck5">嘻嘻嘻</label>
+			<p>选择的值为：{{ checked2 }}</p>
+			
+			<p>select</p>
+			<select name="" v-model="selected">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<p>选择的值为：{{ selected }}</p>
+			
+			<form action="" method="">
+		       <fieldset id="">
+				  <legend>表单</legend>
+				  文本：<input type="text" name="" id="" value="hehe" /><br>
+				  密码：<input type="password" name="" id="" value="111"/><br>
+				  复选框：<input type="checkbox" name="" id="" value="aa" /><br>
+				  单选框：<input type="radio" name="" id="" value="false" /><br>
+				  按钮：<input type="button" name="" id="" value="aa"  @click="getValue" /><br>
+				  重置：<input type="reset" name="" id="" value="ss" /><br>
+				  提交：<input type="submit" name="" id="" value="" /><br>
+				  文件：<input type="file" name="" id="aa" value="file" /><br>
+				  隐藏：<input type="hidden" name="" id="" value="" /><br>
+				  文本域：<textarea id="" rows="" cols="">value</textarea><br>
+				  下拉框：<select name="">
+							<optgroup>
+								<option value="">1</option>
+								<option value="">2</option>
+							</optgroup>
+						 </select>
+			   </fieldset>
+			</form>
+				   
+			
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					message: 'hello',
+					message2: 'world',
+					checked1: false,
+					checked2: [],
+					selected: ''
+				},
+				methods: {
+					getValue: function(){
+						alert(document.getElementById("aa").value);
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>

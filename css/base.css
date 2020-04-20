@@ -1,0 +1,15 @@
+/* 
+
+ 通用基本样式
+ 
+ */
+
+/* 单行文本溢出显示省略号 */
+.ellipsis-1{ width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+/* 多行文本溢出显示省略号 */
+.ellipsis-2{ width: 100%;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+
+/* 浮动 */
+.flt-left{ float: left;}
+.flt-right{ float: right;}
+.flt-clear:after{ clear: both;content:'';display: block;visibility: hidden;width: 0;height: 0;}
